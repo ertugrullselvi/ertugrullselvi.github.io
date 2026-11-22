@@ -20,22 +20,18 @@ jobs:
     env:
       HUGO_VERSION: 0.169.0
     steps:
-      - name: Hugo'yu kur (extended)
-        run: |
-          wget -O hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
-          sudo dpkg -i hugo.deb
-
       - name: Kodu al (tema dahil)
         uses: actions/checkout@v4
         with:
           submodules: recursive
 
-      - name: Pages ayarlarini al
-        id: pages
-        uses: actions/configure-pages@v5
+      - name: Hugo'yu kur (extended)
+        run: |
+          wget -O hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
+          sudo dpkg -i hugo.deb
 
       - name: Siteyi derle
-        run: hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+        run: hugo --minify
 
       - name: Yayin dosyasini hazirla
         uses: actions/upload-pages-artifact@v3
