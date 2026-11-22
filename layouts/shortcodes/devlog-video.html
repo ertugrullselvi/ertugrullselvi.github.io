@@ -1,0 +1,13 @@
+{{- $title := .Get "title" | default "Devlog Videosu" }}
+{{- $id := .Get "id" }}
+<div class="video-embed">
+  {{- if $id }}
+  <iframe src="https://www.youtube-nocookie.com/embed/{{ $id }}" title="{{ $title }}" loading="lazy" allowfullscreen></iframe>
+  {{- else }}
+  <div class="video-placeholder">
+    <div class="video-play">▶</div>
+    <p class="video-title">{{ $title }}</p>
+    <p class="video-note">YouTube Devlog Video Embed Alanı</p>
+  </div>
+  {{- end }}
+</div>

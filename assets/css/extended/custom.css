@@ -1,0 +1,862 @@
+/* 780px ana sütun */
+:root {
+  --main-width: 780px;
+
+  /* Açık tema (taslaktaki renkler) */
+  --theme: #f5f5f5;
+  --entry: #ffffff;
+  --primary: #1e1e1e;
+  --secondary: #666666;
+  --tertiary: #e5e5e5;
+  --content: #1e1e1e;
+  --code-bg: #f0f0f0;
+  --border: #e5e5e5;
+}
+
+/* Koyu tema */
+.dark {
+  --theme: #1d1e20;
+  --entry: #2e2e33;
+  --primary: #dadadb;
+  --secondary: #9b9c9d;
+  --tertiary: #38383d;
+  --content: #c4c4c5;
+  --code-bg: #161618;
+  --border: #38383d;
+}
+
+
+/* Kartlar */
+.post-entry {
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: transform 0.15s ease, border-color 0.15s ease;
+}
+
+.post-entry:hover {
+  transform: translateY(-2px);
+}
+
+.post-entry:active {
+  transform: scale(0.99);
+}
+
+.post-entry .entry-header h2 {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.post-entry .entry-content {
+  font-size: 14px;
+  color: var(--secondary);
+  margin: 6px 0;
+}
+
+/* Etiket düğmeleri (yazı sayfalarındaki etiketler) */
+.post-tags li a {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 11px;
+  background: rgba(128, 128, 128, 0.12);
+  border: none;
+  border-radius: 4px;
+  padding: 2px 8px;
+  color: var(--secondary);
+}
+
+.post-tags li a:hover {
+  color: var(--primary);
+  background: rgba(128, 128, 128, 0.2);
+}
+
+
+
+
+
+
+
+/* Karttaki etiket düğmeleri */
+.card-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 10px 0 0;
+  padding: 0;
+  position: relative;
+  z-index: 2; /* kartın tıklama alanının üstünde kalsın */
+}
+
+.card-tags li {
+  margin: 0;
+}
+
+.card-tags a {
+  display: inline-block;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  background: rgba(128, 128, 128, 0.14);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 14px;
+  color: var(--secondary);
+  transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease, border-color 0.15s ease;
+}
+
+.card-tags a:hover {
+  color: var(--primary);
+  background: rgba(128, 128, 128, 0.25);
+  border-color: var(--secondary);
+  transform: translateY(-1px);
+}
+
+.card-tags a:active {
+  transform: scale(0.96);
+}
+
+
+
+/* Sabit proje rozeti */
+.card-badge {
+  display: inline-block;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 11px;
+  font-weight: 500;
+  color: #d97706;
+  margin-bottom: 6px;
+}
+
+.dark .card-badge {
+  color: #fbbf24;
+}
+
+
+/* Tarih ve okuma süresi kartın üstünde */
+.post-entry {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-entry .entry-footer {
+  order: -1;
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 12px;
+  color: var(--secondary);
+}
+
+
+
+
+/* Yazı içi tablolar (BOM) */
+.post-content table {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+.post-content table th {
+  background: rgba(128, 128, 128, 0.1);
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.post-content table td {
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.post-content table td:first-child {
+  font-weight: 500;
+}
+
+.post-content table td:last-child {
+  color: var(--secondary);
+}
+
+.post-content table tr:last-child td {
+  border-bottom: none;
+}
+
+/* BOM tablosu: tam genişlik ve sabit sütunlar */
+.post-content table {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.post-content table th:first-child,
+.post-content table td:first-child {
+  width: 35%;
+}
+
+/* Devlog video alanı */
+.video-embed {
+  aspect-ratio: 16 / 9;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 0 0 28px;
+}
+
+.video-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.video-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  text-align: center;
+  color: #ffffff;
+  background: linear-gradient(to top right, #09090b, #18181b, #27272a);
+}
+
+.video-play {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 12px;
+  border-radius: 50%;
+  background: #dc2626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.video-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+
+.video-note {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 12px;
+  color: #a1a1aa;
+  margin: 0;
+}
+
+
+
+/* Proje sayfasındaki devlog listesi */
+.project-devlogs {
+  margin: 0 0 28px;
+}
+
+.project-devlogs h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+
+.project-devlogs ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.project-devlogs li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 16px;
+}
+
+.project-devlogs li a {
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.project-devlogs li a:hover {
+  text-decoration: underline;
+}
+
+.devlog-date {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 12px;
+  color: var(--secondary);
+  white-space: nowrap;
+}
+
+
+
+
+/* GitHub repo kartı */
+.github-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 32px 0 0;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--entry);
+}
+
+@media (min-width: 640px) {
+  .github-card {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.github-card h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 4px;
+}
+
+.github-card p {
+  font-size: 13px;
+  color: var(--secondary);
+  margin: 0;
+}
+
+.github-btn {
+  display: inline-block;
+  flex-shrink: 0;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: #18181b;
+  color: #ffffff !important;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.dark .github-btn {
+  background: #ffffff;
+  color: #18181b !important;
+}
+
+/* Etiketler başlığın altında */
+.post-tags-top {
+  margin: 12px 0 0;
+}
+
+
+
+
+/* Ana sayfa sosyal medya ikonları */
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0 0;
+  padding: 0;
+}
+
+.social-icons li {
+  list-style: none;
+  margin: 0;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background: rgba(128, 128, 128, 0.1);
+  color: var(--primary);
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.social-icons a:hover {
+  background: rgba(128, 128, 128, 0.2);
+  transform: translateY(-1px);
+}
+
+.social-icons a:active {
+  transform: scale(0.96);
+}
+
+.social-icons a svg {
+  width: 20px;
+  height: 20px;
+}
+
+
+
+/* Ana sayfa bölüm başlıkları */
+.home-section {
+  margin-bottom: 32px;
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 28px 0 12px;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--secondary);
+}
+
+.section-head a {
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+.section-head a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+/* Kart üst satırı: rozet solda, tarih sağda */
+.post-entry .entry-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-badge {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: rgba(128, 128, 128, 0.12);
+  color: var(--secondary);
+}
+
+.meta-right {
+  white-space: nowrap;
+}
+
+
+
+/* Alt bilgi (footer): referansa göre */
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  border-top: 1px solid var(--border);
+  padding: 24px 0;
+  font-size: 13px;
+  color: var(--secondary);
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 12px;
+}
+
+.footer a {
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: var(--primary);
+}
+
+.footer-links span {
+  color: var(--secondary);
+}
+
+
+/* Tema geçişini yumuşat */
+html,
+body,
+.post-entry,
+.first-entry,
+.post-single,
+.footer,
+.github-card,
+.project-devlogs li,
+.card-tags a,
+.post-tags a,
+.section-head a {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+
+
+
+
+/* ==========================================================
+   MARKA ALANI: logo + yazı
+   ========================================================== */
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.brand .logo-img {
+  height: 70px;
+  width: auto;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.brand .logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* Tema logosu: sadece aktif temanın logosu görünür */
+/* Tema logosu: .dark sınıfı html veya body üzerinde olsa da çalışır */
+.brand .logo-dark {
+  display: none;
+}
+
+.dark .brand .logo-light {
+  display: none;
+}
+
+.dark .brand .logo-dark {
+  display: block;
+}
+
+
+/* Logo: tek dosya, renk --primary değişkeninden gelir */
+.brand .logo-mark {
+  display: inline-block;
+  height: 70px;
+  aspect-ratio: 900 / 672;
+  background-color: var(--primary);
+  -webkit-mask: url("/images/logo-light.png") no-repeat center / contain;
+          mask: url("/images/logo-light.png") no-repeat center / contain;
+  transition: background-color 0.3s ease;
+}
+
+
+
+
+
+/* Header: biraz aşağı al, menü fontunu büyüt */
+.header {
+  padding-top: 12px;
+}
+
+.menu {
+  font-size: 36px;
+}
+
+.menu li a {
+  font-weight: 700;
+}
+
+
+
+/* Üst menü: logo ve menü tam genişlikte, altındaki çizgi 780px sütunda */
+.header {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.header-nav {
+  padding-bottom: 12px;
+  position: relative;
+}
+
+.header-nav::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 2000px;
+  max-width: calc(100% - 40px);
+  height: 1px;
+  background: var(--border);
+}
+
+
+
+
+
+/* Hakkımda sayfası: kart düzeni */
+.about-card {
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-top: 24px;
+}
+
+.about-card > p:first-of-type {
+  font-size: 17px;
+  color: var(--secondary);
+  margin-top: 0;
+}
+
+.about-card h3 {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--secondary);
+  margin: 24px 0 10px;
+}
+
+.about-card hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 20px 0;
+}
+
+.about-card ul {
+  padding-left: 20px;
+}
+
+.about-card li {
+  margin: 6px 0;
+}
+
+/* TEKNİK YETKİNLİKLER: backtick'li öğeler etiket (pill) olur */
+.about-card p:has(> code) {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.about-card code {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  font-size: 13px;
+  color: var(--primary);
+  background: rgba(128, 128, 128, 0.12);
+  border-radius: 6px;
+  padding: 4px 10px;
+}
+
+
+
+/* Yazı içeriği: font boyutu ve satır aralığı */
+.post-content {
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.post-content h2 {
+  font-size: 24px;
+}
+
+.post-content h3 {
+  font-size: 24px;
+}
+
+
+
+
+/* Hakkımda: kompakt düzen */
+.about-page .post-title {
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+
+.about-card {
+  font-size: 16px;
+  line-height: 1.55;
+  padding: 16px 20px;
+  margin-top: 12px;
+}
+
+.about-card > p:first-of-type {
+  font-size: 15px;
+  margin: 0 0 8px;
+}
+
+.about-card hr {
+  margin: 12px 0;
+}
+
+.about-card h3 {
+  font-size: 11px;
+  margin: 14px 0 6px;
+}
+
+.about-card ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.about-card li {
+  margin: 2px 0;
+}
+
+.about-card p:has(> code) {
+  gap: 6px;
+  margin: 6px 0 0;
+}
+
+.about-card code {
+  font-size: 12px;
+  padding: 3px 8px;
+}
+
+/* Yazı görselleri: tek yerden boyut kontrolü */
+.post-content img {
+  max-width: 100%;
+  height: auto;
+}
+
+.post-content figure.proj-img {
+  margin: 24px auto;
+  text-align: center;
+}
+
+.post-content figure.proj-img img {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+/* Küçük görsel varyantı */
+.post-content figure.proj-img-small img {
+  max-width: 380px;
+}
+
+.post-content figure.proj-img figcaption {
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--secondary);
+}
+
+
+/* Görsel ızgarası: 2 sütun, 2 satır */
+.img-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.img-grid figure {
+  margin: 0;
+}
+
+.img-grid img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+/* Telefonda tek sütun */
+@media (max-width: 600px) {
+  .img-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Kod blokları: sabit yükseklikte pencere, içinde kaydırma */
+.post-content .highlight {
+  max-height: 460px;
+  overflow: auto;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin: 16px 0;
+}
+
+.post-content .highlight pre {
+  margin: 0;
+  border-radius: 0;
+}
+
+
+/* Lightbox: tıklanan görselin tam hali */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  background: rgba(0, 0, 0, 0.88);
+  cursor: zoom-out;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 36px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+
+
+
+
+

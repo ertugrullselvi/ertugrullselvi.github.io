@@ -1,0 +1,9 @@
+{{- $url := .Get "url" }}
+{{- $title := .Get "title" | default "Kaynak Kodlar ve SolidWorks / STL Dosyaları" }}
+<div class="github-card">
+  <div>
+    <h3>{{ $title }}</h3>
+    <p>Tüm firmware kodları ve 3D baskı parçaları GitHub deposunda barındırılmaktadır.</p>
+  </div>
+  <a class="github-btn" href="{{ $url }}" target="_blank" rel="noopener">GitHub Reposuna Git</a>
+</div>

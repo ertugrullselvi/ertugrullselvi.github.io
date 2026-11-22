@@ -1,0 +1,20 @@
+{{- $tag := .Get "tag" }}
+{{- $list := slice }}
+{{- range site.RegularPages }}
+  {{- if and (eq .Section "devlog") (in .Params.tags $tag) }}
+    {{- $list = $list | append . }}
+  {{- end }}
+{{- end }}
+{{- if $list }}
+<div class="project-devlogs">
+  <h2>Proje Devlog'ları</h2>
+  <ul>
+    {{- range sort $list "Date" "desc" }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <span class="devlog-date">{{ .Date.Format "02.01.2006" }}</span>
+    </li>
+    {{- end }}
+  </ul>
+</div>
+{{- end }}

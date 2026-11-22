@@ -1,0 +1,73 @@
+baseURL: "https://ertugrulselvi.github.io/"
+languageCode: "tr-TR"
+defaultContentLanguage: "tr"
+title: "Ertuğrul Selvi"
+theme: "PaperMod"
+pagination:
+  pagerSize: 10
+
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  mainSections: ["projects", "devlog", "notes"]
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 2
+    keys: ["title", "permalink", "summary", "content"]
+  defaultTheme: auto
+  disableThemeToggle: false
+  ShowReadingTime: true
+  ShowPostNavLinks: false
+  ShowBreadCrumbs: false
+  ShowCodeCopyButtons: true
+  homeInfoParams:
+    Title: "Merhaba, ben Ertuğrul."
+    Content: >
+      Mekatronik mühendisliği öğrencisiyim. Özel robotik manipülatörler, gömülü sistemler ve mekanik tasarımlar geliştiriyorum. Projelerimin teknik dokümantasyonunu ve geliştirme günlüklerini burada paylaşıyorum.
+  socialIcons:
+     - name: github
+       url: "https://github.com/ertugrulselvi88"
+     - name: youtube
+       url: "https://youtube.com/@Ertugrullselvi"
+     - name: instagram
+       url: "https://instagram.com/ertugrullselvi"
+     - name: linkedin
+       url: "https://linkedin.com/in/ertugrul-selvi"
+
+
+menu:
+  main:
+    - identifier: projects
+      name: Projeler
+      url: /projects/
+      weight: 10
+    - identifier: devlog
+      name: Devlog
+      url: /devlog/
+      weight: 20
+    - identifier: notes
+      name: Notlar
+      url: /notes/
+      weight: 30
+    - identifier: about
+      name: Hakkımda
+      url: /about/
+      weight: 40
+    - identifier: search
+      name: Arama
+      url: /search/
+      weight: 50
