@@ -857,6 +857,17 @@ body,
 
 
 
+/* Belgeler: açıklama yazısı */
+.img-grid figure {
+  margin: 0;
+}
 
+.img-grid figcaption {
+  margin-top: 8px;
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--secondary);
+}
 
 

@@ -37,10 +37,10 @@ params:
   homeInfoParams:
     Title: "Merhaba, ben Ertuğrul."
     Content: >
-      Mekatronik mühendisliği öğrencisiyim. Özel robotik manipülatörler, gömülü sistemler ve mekanik tasarımlar geliştiriyorum. Projelerimin teknik dokümantasyonunu ve geliştirme günlüklerini burada paylaşıyorum.
+      Mekatronik mühendisliği öğrencisiyim. Yaptığım robotik, otomasyon vb. ile ilgili projelerimin teknik dökümantasyon ve proje süreçlerini burada paylaşıyorum.
   socialIcons:
      - name: github
-       url: "https://github.com/ertugrulselvi88"
+       url: "https://github.com/ertugrullselvi"
      - name: youtube
        url: "https://youtube.com/@Ertugrullselvi"
      - name: instagram

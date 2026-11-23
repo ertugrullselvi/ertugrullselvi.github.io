@@ -86,13 +86,11 @@ Donanım toplandıktan sonra yazılım aşamasına geçtik. Python ortamında il
 
 ---
 
-## 6. Başarılar ve Kişisel Kazanım
+## 🏆 Başarılar
 
-Uykusuz geceler, yanan sürücüler ve yarışma alanındaki yoğun stresin ardından emeğimizin karşılığını kürsüde aldık:
-
-- **17. Uluslararası MEB Robot Yarışması (Erzurum):**
-  - **Toygun** — Robot Kol Kategorisi **Dünya 2.liği** 🥈
-  - **Hunter** — Robot Kol Kategorisi **Dünya 3.lüğü** 🥉
+* **17. Uluslararası MEB Robot Yarışması (Kayseri / 21-24 Mayıs 2025):**
+  * **Toygun** — Robot Kol Kategorisi **Dünya 2.liği** 🥈
+  * **Hunter** — Robot Kol Kategorisi **Dünya 3.liği** 🥉
 
 
 <div class="img-grid">
@@ -105,4 +103,3 @@ Uykusuz geceler, yanan sürücüler ve yarışma alanındaki yoğun stresin ard�
 
 ---
 
-{{< github-card url="https://github.com/ertugrulselvi/toygun-robot-arm" >}}

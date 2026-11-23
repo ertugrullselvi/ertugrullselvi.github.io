@@ -1,12 +1,12 @@
 ---
-title: "Pars: 3-DOF Masaüstü Robot Kol"
+title: "Kodo: 3-DOF Masaüstü Robot Kol"
 
 date: 2026-11-08
 summary: "Bipolar moda dönüştürülmüş 28BYJ-48 step motorlar, A4988 sürücüler ve özel 3D baskı mekanik şasi ile geliştirilen açık kaynak masaüstü manipülatör."
 weight: 1
 pinned: true
 hiddenInHomeList: false
-tags: ["Robotik", "C++", "SolidWorks", "Step-Motor", "Arduino"]
+tags: ["Kodo", "Robotik", "C++", "SolidWorks", "Step-Motor", "Arduino"]
 ---
 
 {{< project-devlogs tag="Toygun" >}}

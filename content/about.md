@@ -37,3 +37,6 @@ Mekatronik mühendisliği disipliniyle mekanik tasarım, gömülü yazılım ve 
 
 `C / C++` `Python` `CAD Design` `CNC` `Talaşlı İmalat` `Teknik Resim` `Endüstriyel Otomasyon(PLC & Simulasyon)` `3D Baskı ve Prototipleme`
 `Gömülü Sistemler` `Elektronik` `Robotik` `Sensörler`
+
+
+**Yarışma katılım ve derece belgeleri için [Belgeler sayfasına](/belgeler/) bakabilirsiniz.**

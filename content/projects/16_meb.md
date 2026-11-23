@@ -344,3 +344,11 @@ void kosesol() {
   delay(200);
   cizgi_izle();
 }
+```
+
+---
+
+## 🏆 Başarılar
+
+* **16. Uluslararası MEB Robot Yarışması (Erzurum / 16-19 Ekim 2024):**
+  * **Esata2024** — Tasarla-Çalıştır Kategorisi **Dünya 1.liği** 🥇
